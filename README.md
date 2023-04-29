@@ -1,5 +1,3 @@
-# base_project
-
 # Django base project with some boring configs already made so you can have a quickstart :)
 
 # Features:
