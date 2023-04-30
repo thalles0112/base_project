@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-84ir8vq*py0-ik)x@0%l__9hb^i86%exv2a7hh2=*vr&4*#3sc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.0.160']
+ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL = True
 
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'daphne',
     'api',
     'backend',
+    'websocket',
     'rest_framework',
     "corsheaders",
     'django.contrib.admin',
@@ -81,9 +82,9 @@ ASGI_APPLICATION = "backend.asgi.application"
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
+       # "CONFIG": {
+        #    "hosts": [("127.0.0.1", 6379)],
+        #},
     },
 }
 
